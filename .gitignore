@@ -39,5 +39,15 @@ Thumbs.db
 .env
 .env.local
 
+# Generated data files (may contain personal information)
+*.json
+*_tickets.json
+*_data.json
+
 # Logs
 *.log
+
+# Jira-specific files that may contain sensitive data
+jira_data/
+exports/
+downloads/

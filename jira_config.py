@@ -15,7 +15,12 @@ class JiraConfig:
 
     def get_jira_client(self):
         auth = (self.username, self.api_token)
-        return JIRA(server=self.url, basic_auth=auth)
+        options = {
+            'server': self.url,
+            'rest_api_version': '3',
+            'agile_rest_api_version': '1.0'
+        }
+        return JIRA(options=options, basic_auth=auth)
 
     def test_connection(self):
         try:
